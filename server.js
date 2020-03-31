@@ -5,10 +5,12 @@ var bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+// const mongoose = require('mongoose')
+// mongoose.connect('mongodb://localhost:27017/whiteboard-cs5610-sp20',
+//     { useNewUrlParser: true, useUnifiedTopology: true })
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost:27017/whiteboard-cs5610-sp20',
+mongoose.connect('mongodb://heroku_jian:zhz941026@ds063869.mlab.com:63869/heroku_0gqgh8xw',
     { useNewUrlParser: true, useUnifiedTopology: true })
-
 //https://agile-cliffs-22220.herokuapp.com
 app.use(function (req,res, next) {
     res.header('Access-Control-Allow-Origin', '*');
